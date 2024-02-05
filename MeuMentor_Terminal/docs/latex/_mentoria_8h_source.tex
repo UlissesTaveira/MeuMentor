@@ -1,0 +1,41 @@
+\doxysection{Mentoria.\+h}
+\hypertarget{_mentoria_8h_source}{}\label{_mentoria_8h_source}\index{src/Mentoria.h@{src/Mentoria.h}}
+\mbox{\hyperlink{_mentoria_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MENTORIA\_H}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MENTORIA\_H}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00007}\mbox{\hyperlink{class_mentoria}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mentoria}{Mentoria}}\ \{}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00008}00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00009}00009\ \ \ \ \ std::string\ codigoDisciplina;}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00010}00010\ \ \ \ \ std::string\ dataMentoria;}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{double}\ valor;}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00013}00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ Construtor\ padrão}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_mentoria}{Mentoria}}(\textcolor{keyword}{const}\ std::string\ codigoDisciplina\ =\ \textcolor{stringliteral}{"{}NOCODE"{}},\ \textcolor{keyword}{const}\ std::string\ dataMentoria\ =\ \textcolor{stringliteral}{"{}NODATE"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ valor\ =\ 0);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//Destrutor\ padrão}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_mentoria_a2e05679de06885664133deec2f0dfe2a}{\string~Mentoria}}();}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mentoria_a183dce5baadc182ad83a936a7fbe2958}{setCodigoDisciplina}}(\textcolor{keyword}{const}\ std::string\&\ codigo);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mentoria_ac6ad1d3a5e199076a53ac9b848bdc242}{setDataMentoria}}(\textcolor{keyword}{const}\ std::string\&\ data);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mentoria_a69305d4da379a6239784d2b242d65d17}{setValor}}(\textcolor{keywordtype}{double}\ valor);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00026}00026\ \ \ \ \ std::string\ \mbox{\hyperlink{class_mentoria_a6e489dbb1b3cbd86c69b4252d5a9809c}{getCodigoDisciplina}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00027}00027\ \ \ \ \ std::string\ \mbox{\hyperlink{class_mentoria_a509a9f86a93f857dd5517d9e80783b31}{getDataMentoria}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_mentoria_a5962a32dc1c6995a3ff38d64aee6c0bc}{getValor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//Sobrecarga}}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_mentoria_a52a7e910ec8df600abb7af044d914c5b}{operator<<}}(std::ostream\&\ out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_mentoria}{Mentoria}}\&\ m);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_mentoria_a3dd9d8c37d7adbd14de7969c0e0bfa9a}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_mentoria}{Mentoria}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_mentoria}{Mentoria}}\&\ m2);}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_mentoria_8h_source_l00035}00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MENTORIA\_H}}
+
+\end{DoxyCode}

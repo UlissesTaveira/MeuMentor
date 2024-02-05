@@ -1,0 +1,36 @@
+\doxysection{unit.\+cpp}
+\hypertarget{unit_8cpp_source}{}\label{unit_8cpp_source}\index{test/unit/unit.cpp@{test/unit/unit.cpp}}
+\mbox{\hyperlink{unit_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../../src/Mentoria.h"{}}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}../../src/MeuMentor.h"{}}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00006}\mbox{\hyperlink{unit_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00006}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{unit_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ Testando\ a\ classe\ Mentoria}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ Testando\ setters\ e\ getters}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{class_mentoria}{Mentoria}}\ mentoria;}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00012}00012\ \ \ \ \ mentoria.\mbox{\hyperlink{class_mentoria_a183dce5baadc182ad83a936a7fbe2958}{setCodigoDisciplina}}(\textcolor{stringliteral}{"{}bcc123"{}});}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00013}00013\ \ \ \ \ mentoria.\mbox{\hyperlink{class_mentoria_ac6ad1d3a5e199076a53ac9b848bdc242}{setDataMentoria}}(\textcolor{stringliteral}{"{}02/02/24"{}});}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00014}00014\ \ \ \ \ mentoria.\mbox{\hyperlink{class_mentoria_a69305d4da379a6239784d2b242d65d17}{setValor}}(50.00);}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00016}00016\ \ \ \ \ assert(mentoria.\mbox{\hyperlink{class_mentoria_a6e489dbb1b3cbd86c69b4252d5a9809c}{getCodigoDisciplina}}()\ ==\ \textcolor{stringliteral}{"{}bcc123"{}});}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00017}00017\ \ \ \ \ assert(mentoria.\mbox{\hyperlink{class_mentoria_a509a9f86a93f857dd5517d9e80783b31}{getDataMentoria}}()\ ==\ \textcolor{stringliteral}{"{}02/02/24"{}});}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00018}00018\ \ \ \ \ assert(mentoria.\mbox{\hyperlink{class_mentoria_a5962a32dc1c6995a3ff38d64aee6c0bc}{getValor}}()\ ==\ 50.00);}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_meu_mentor}{MeuMentor}}*\ mentor\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_meu_mentor}{MeuMentor}}();}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00022}00022\ \ \ \ \ mentor-\/>\mbox{\hyperlink{class_meu_mentor_a4fd93f74b1b15ef6d6574e71ceda96b6}{criarMentoria}}(\textcolor{stringliteral}{"{}bcc123"{}},\ \textcolor{stringliteral}{"{}02/02/24"{}},\ 50.00);}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00024}00024\ \ \ \ \ assert(!(mentor-\/>\mbox{\hyperlink{class_meu_mentor_a55e85e591cb60853064fe58f04e1be6b}{buscaMentoria}}(\textcolor{stringliteral}{"{}bcc123"{}}).empty()));}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Imprimindo\ as\ informações}}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00027}00027\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testes\ Unitários\ Passaram!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{unit_8cpp_source_l00030}00030\ \}}
+
+\end{DoxyCode}
