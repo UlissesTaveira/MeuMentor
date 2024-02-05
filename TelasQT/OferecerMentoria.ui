@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>oferecerMentoria</class>
+ <widget class="QDialog" name="oferecerMentoria">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Oferecer Mentoria</string>
+  </property>
+  <widget class="QPushButton" name="InscricaoMentor">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>131</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Inscrição para Mentor</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="novaMentoria">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>131</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cadastrar Nova Mentoria</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <zorder>novaMentoria</zorder>
+  <zorder>InscricaoMentor</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>novaMentoria</tabstop>
+  <tabstop>InscricaoMentor</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

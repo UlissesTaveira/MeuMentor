@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>inscricaoMentor</class>
+ <widget class="QDialog" name="inscricaoMentor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inscrição Para Mentor</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>60</y>
+     <width>217</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_informaCodigo">
+      <property name="text">
+       <string>Informe o código da disciplina:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox_codigoMentor">
+      <item>
+       <property name="text">
+        <string>Selecionar</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_docs">
+      <property name="text">
+       <string>Documento(s) que comprove(m) proficiência:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCommandLinkButton" name="commandLinkButton">
+      <property name="text">
+       <string>Fazer Upload</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="enviarI">
+      <property name="text">
+       <string>Enviar Inscrição</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

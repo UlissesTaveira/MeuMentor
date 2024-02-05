@@ -2,6 +2,7 @@
 #define MENTORIA_H
 
 #include <string>
+#include <iostream>
 
 class Mentoria {
 private:
@@ -11,7 +12,10 @@ private:
 
 public:
     // Construtor padrão
-    Mentoria();
+    Mentoria(const std::string codigoDisciplina = "NOCODE", const std::string dataMentoria = "NODATE", const double valor = 0);
+
+    //Destrutor padrão
+    virtual ~Mentoria();
 
     // Setters
     void setCodigoDisciplina(const std::string& codigo);
@@ -22,6 +26,10 @@ public:
     std::string getCodigoDisciplina() const;
     std::string getDataMentoria() const;
     double getValor() const;
+
+    //Sobrecarga
+    friend std::ostream& operator<<(std::ostream& out, const Mentoria& m);
+    friend bool operator==(const Mentoria& m1, const Mentoria& m2);
 };
 
 #endif // MENTORIA_H
