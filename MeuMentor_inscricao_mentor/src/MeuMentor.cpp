@@ -66,7 +66,7 @@ void MeuMentor::telaCriarMentor(){
     std::cout << "\n\nDigite o codigo da diciplina: ";
     std::cin  >> codigoDisciplina;
 
-    std::cout << "Insira o Documento que comprova proficiencia: ";
+    std::cout << "Insira o Documento que comprova proficiencia: "; // por exemplo: Boletim
     std::cin >> docProficiencia;
 
     if(validarMonitor(codigoDisciplina)){
