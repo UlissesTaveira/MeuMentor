@@ -19,7 +19,7 @@ int main() {
 
     MeuMentor* mentor = new MeuMentor();
 
-    mentor->criarMentoria("bcc123", "02/02/24", 50.00);
+    mentor->criarMentoria("bcc123", "02/02/24", "boletim", 50.00);
 
     assert(!(mentor->buscaMentoria("bcc123").empty()));
 
