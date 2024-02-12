@@ -14,8 +14,16 @@ void Mentoria::setDataMentoria(const std::string& data) {
     dataMentoria = data;
 }
 
+void Mentoria::setdocProficiencia(const std::string& doc) {
+    docProficiencia = doc;
+}
+
 void Mentoria::setValor(double novoValor) {
     valor = novoValor;
+}
+
+std::string Mentoria::getdocProficiencia() const {
+    return docProficiencia;
 }
 
 std::string Mentoria::getCodigoDisciplina() const {
