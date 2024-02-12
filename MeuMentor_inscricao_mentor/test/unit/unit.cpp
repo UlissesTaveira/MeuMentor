@@ -12,10 +12,12 @@ int main() {
     mentoria.setCodigoDisciplina("bcc123");
     mentoria.setDataMentoria("02/02/24");
     mentoria.setValor(50.00);
+    mentoria.setdocProficiencia("boletim");
 
     assert(mentoria.getCodigoDisciplina() == "bcc123");
     assert(mentoria.getDataMentoria() == "02/02/24");
     assert(mentoria.getValor() == 50.00);
+    assert(mentoria.getdocProficiencia() == "boletim");
 
     MeuMentor* mentor = new MeuMentor();
 
