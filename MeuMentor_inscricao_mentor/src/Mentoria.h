@@ -20,11 +20,13 @@ public:
 
     // Setters
     void setCodigoDisciplina(const std::string& codigo);
+    void setdocProficiencia(const std::string& doc);
     void setDataMentoria(const std::string& data);
     void setValor(double valor);
 
     // Getters
     std::string getCodigoDisciplina() const;
+    std::string getdocProficiencia() const;
     std::string getDataMentoria() const;
     double getValor() const;
 
