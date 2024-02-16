@@ -27,7 +27,8 @@ CREATE TABLE `Admin` (
   `Nome` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Senha` varchar(255) NOT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `Email` (`Email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -39,6 +40,35 @@ LOCK TABLES `Admin` WRITE;
 /*!40000 ALTER TABLE `Admin` DISABLE KEYS */;
 INSERT INTO `Admin` VALUES (1,'Admin','admin@meumentor.com','1234');
 /*!40000 ALTER TABLE `Admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Mentor`
+--
+
+DROP TABLE IF EXISTS `Mentor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Mentor` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Senha` varchar(255) NOT NULL,
+  `Historico_Path` varchar(500) DEFAULT NULL,
+  `Curso` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `EMAIL` (`Email`),
+  UNIQUE KEY `email_2` (`Email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Mentor`
+--
+
+LOCK TABLES `Mentor` WRITE;
+/*!40000 ALTER TABLE `Mentor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Mentor` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -57,7 +87,7 @@ CREATE TABLE `Mentoria` (
   `Mentor` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `Mentor` (`Mentor`),
-  CONSTRAINT `Mentoria_ibfk_1` FOREIGN KEY (`Mentor`) REFERENCES `Usuario` (`ID`)
+  CONSTRAINT `Mentoria_ibfk_1` FOREIGN KEY (`Mentor`) REFERENCES `Mentor` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -84,7 +114,7 @@ CREATE TABLE `Relation_Usr_to_Ment` (
   PRIMARY KEY (`ID`),
   KEY `Aluno` (`Aluno`),
   KEY `Mentoria` (`Mentoria`),
-  CONSTRAINT `Relation_Usr_to_Ment_ibfk_1` FOREIGN KEY (`Aluno`) REFERENCES `Usuario` (`ID`),
+  CONSTRAINT `Relation_Usr_to_Ment_ibfk_1` FOREIGN KEY (`Aluno`) REFERENCES `Mentor` (`ID`),
   CONSTRAINT `Relation_Usr_to_Ment_ibfk_2` FOREIGN KEY (`Mentoria`) REFERENCES `Mentoria` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -97,34 +127,6 @@ LOCK TABLES `Relation_Usr_to_Ment` WRITE;
 /*!40000 ALTER TABLE `Relation_Usr_to_Ment` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Relation_Usr_to_Ment` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `Usuario`
---
-
-DROP TABLE IF EXISTS `Usuario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Usuario` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Senha` varchar(255) NOT NULL,
-  `Historico_Path` varchar(500) DEFAULT NULL,
-  `Curso` varchar(255) NOT NULL,
-  PRIMARY KEY (`ID`),
-  UNIQUE KEY `EMAIL` (`Email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Usuario`
---
-
-LOCK TABLES `Usuario` WRITE;
-/*!40000 ALTER TABLE `Usuario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Usuario` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -135,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-11 15:30:06
+-- Dump completed on 2024-02-15 16:50:02
